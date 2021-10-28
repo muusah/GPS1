@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>News</title>
+    <link rel="stylesheet" href="css/newscss.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="shortcut icon" href="img/title logo.png">
+  <link rel="apple-touch-icon" href="img/title logo.png">
+    <style>
+      .footer {
+        width: 80%;
+        margin: auto;
+        padding: 5px;
+        padding-left: 5px;
+        text-align: center;
+        background: #ddd;
+  }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top id="mainnNav">
+        <div class="container">
+          <a class="navbar-brand" href="#page-top">Global Perspective Sport</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link js-scroll-trigger" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#reservation" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Reservation
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="tennis.html">Tennis</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="basketball.html">Basketball</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="football.html">Football</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#shop">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="news.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#aboutus">About Us</a>
+              </li>
+             
+            </ul>
+          </div>
+        </div>
+        </div>
+      </nav>
+
+      <br>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <div class="page">
+        <h1>LATEST NEWS</h1>
+        <div class="archive">
+          <!-- <article class="article">
+            <img src="img/cr.jpg" alt="" width="100%" height="90%">
+            <hr>
+            <p style="float: right;">Tragedy in Old Traffod</p>
+          </article>
+          <article class="article">
+            <img src="img/salah2.webp" alt="" width="100%" height="80%">
+            <hr >
+            <p style="float: left;">Hattrick Salah!</p>
+          </article>
+          <article class="article">
+            <img src="img/madrid.jpg" alt="" width="100%" height="80%">
+            <hr >
+            <p style="float: left;">Classic El classico!</p>
+          </article>
+          <article class="article">
+            <img src="img/ole.jpg" alt="" width="100%" height="85%">
+            <hr >
+            <p style="float: left;">Between Ole and Sacked</p>
+            
+          </article> -->
+          <article class="article">5
+            <hr>
+            <hr>
+            <hr>
+          </article>
+          <article class="article">6
+            <hr>
+            <hr>
+            <hr>
+          </article>
+          <article class="article">7
+            <hr>
+            <hr>
+            <hr>
+          </article>
+          <article class="article">8
+            <hr>
+            <hr>
+          </article>
+          <article class="article">9
+            <hr>
+            <hr>
+            <hr>
+          </article>
+          <article class="article">10
+            <hr>
+            <hr>
+          </article>
+          <article class="article">11
+            <hr>
+            <hr>
+            <hr>
+          </article>
+          <article class="article">12
+            <hr class="image"><hr>
+            <hr>
+            <hr>
+          </article>
+          <article class="article">13
+            <hr class="image"><hr>
+            <hr>
+          </article>
+          <article class="article">14
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+          </article>
+          <article class="article">15
+            <hr class="image">
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+          </article>
+          <article class="article">16
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+          </article>
+          <article class="article">
+            </article>
+        </div>
+      </div>
+
+      <div class="footer" style="font-size: 15px;">
+        <p>Global Perspective Sport &#169; 2021</p>
+      </div>
+
+</body>
+<script src="jquery-3.6.0.js"></script>
+<script>
+  $.getJSON("news.json", function(res){
+      var items=[];
+
+      $.each(res, function(index, val){
+
+          items.push("<article>");
+              items.push("<img id='"+index+"'><img src='"+ val.Photo +"' height='100%' width='90%'> ");
+              items.push("<p id='"+index+"'>" + val.Captions + "</p>");
+          items.push("</article>");
+      })
+      $("<article/>", {
+          "class" : "article",
+          html:items.join("")
+      }).appendTo("archive")
+
+  });
+</script>
+</html>
