@@ -89,7 +89,7 @@
             <p style="float: left;">Between Ole and Sacked</p>
             
           </article> -->
-          <article class="article">5
+          <!-- <article class="article">5
             <hr>
             <hr>
             <hr>
@@ -153,10 +153,10 @@
             <hr>
             <hr>
             <hr>
-            <hr>
-          </article>
+            <hr> -->
+          <!-- </article>
           <article class="article">
-            </article>
+            </article> -->
         </div>
       </div>
 
@@ -165,7 +165,7 @@
       </div>
 
 </body>
-<script src="jquery-3.6.0.js"></script>
+<script src="js/jquery-3.6.0.js"></script>
 <script>
   $.getJSON("news.json", function(res){
       var items=[];
@@ -177,10 +177,10 @@
               items.push("<p id='"+index+"'>" + val.Captions + "</p>");
           items.push("</article>");
       })
-      $("<article/>", {
+      $("<div/>", {
           "class" : "article",
           html:items.join("")
-      }).appendTo("archive")
+      }).appendTo(".archive")
 
   });
 </script>
