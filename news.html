@@ -174,8 +174,10 @@
 
           items.push("<article>");
               items.push("<img id='"+index+"'><img src='"+ val.Photo +"' height='100%' width='90%'> ");
+              items.push("<hr>")
               items.push("<p id='"+index+"'>" + val.Captions + "</p>");
           items.push("</article>");
+          
       })
       $("<div/>", {
           "class" : "article",
