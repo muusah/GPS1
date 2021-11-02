@@ -1,33 +1,103 @@
 /* http://responsiveslides.com v1.55 by @viljamis */
 
-.rslides {
-  position: relative;
-  list-style: none;
+/* slider */
+.carousel-item .display-4{
+  margin-top:-370px;
+  font-weight: bold;
+}
+.carousel-item hr{
+  border-width: 2px;
+  border-style: solid;
+  border-color: #fff;
+}
+.carousel .btn{
+  background-color:rgb(58, 58, 58);
+  border: none;
+  border-radius: 25px;
+  padding-right:25px;
+  padding-left:25px;
+  margin-top:0px;
+}
+.carousel .btn:hover{
+  background-color:rgb(100, 100, 100);
+  border: none;
+  border-radius: 25px;
+  padding-right:25px;
+  padding-left:25px;
+  margin-top:0px;
+}
+/* end slider */
+
+.card2 img{
+  height:190px;
+}
+
+.news1 img{
+  height:300px;
+}
+
+.card{
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  }
-
-.rslides li {
-  -webkit-backface-visibility: hidden;
-  position: absolute;
-  display: none;
-  width: 100%;
-  left: 0;
-  top: 0;
-  }
-
-.rslides li:first-child {
   position: relative;
-  display: block;
-  float: left;
-  }
+  text-align: center;
+  cursor: default;
+  margin-bottom: 10px;
+}
+.card img{
+display: block;
+position: relative;
+-webkit-transition: all .4s linear;
+transition: all .4s linear;
+}
+.card:hover img{
+-ms-transform: scale(1.06);
+-webkit-transform: scale(1.06);
+transform: scale(1.06);
+}
+.card .news{
+  color:#000;
+  text-decoration:none;  
+}
+.card .news:hover{
+  color:rgb(0, 89, 255);  
+}
 
-.rslides img {
-  display: block;
-  height: auto;
-  float: left;
-  width: 100%;
-  border: 0;
+/* footer */
+footer{
+  background-color: black;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 7px;
+  padding-top: 30px;
+  margin-left:-193px;
+  margin-right:-193px;
+}
+footer p{
+  color:#fff;
+}
+footer .btn{
+  color: #fff;
+  background-color:transparent;
+  margin-left:1px;
+  margin-bottom:7px;
+}
+
+@media (min-width:768px){
+  .navbar-wrapper{
+      border-radius: 4px;
   }
+  .carousel-caption p{
+      margin-bottom:20px;
+      font-size:21px;
+      line-height:1.4;
+  }
+  .footer{
+    margin-right:-193px;
+  }
+}
+/* footer .btn:hover{
+  background-color: rgb(206, 201, 201);
+} */
+/* end footer */
