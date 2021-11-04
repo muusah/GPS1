@@ -1,0 +1,176 @@
+body{
+    font-family: montserrat;
+}
+
+/* navbar */
+#mainnNav{
+    z-index: 6;
+}
+.navbar-brand{
+    font-weight: 600;
+}
+#shopNav{
+    z-index: 5;
+    margin-top: 55px;
+    margin-bottom: 0;
+    background-color:white;
+}
+#shopNav a{
+    color:black;
+}
+#shopNav .navbar-brand{
+    font-weight: 600;
+    color:rgb(207, 51, 77);
+    font-size:1.1em;
+}
+#shopNav ul{
+    font-size:0.95em;
+}
+#shopNav button{
+    border:none;
+    background-color:rgb(207, 51, 77);
+}
+.ourstore{
+    font-family: montserrat;
+    margin-left: 3px;
+    font-weight: 600;
+    color: rgb(207, 51, 77);
+}
+#storeNav{
+    font-family: montserrat;
+    font-size: 20px;
+    background-color:white;
+    margin-top:60px;
+}
+#storeNav a{
+    color:black;
+}
+/* navbar */
+
+/* content */
+.container{
+    width:90%;
+    margin: 0 auto;
+}
+.row{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow:wrap;
+
+}
+.card1{
+    width:25%;
+    position:relative;
+    background-color:white;
+    border-radius: 20px;
+}
+.card1:hover{
+    transform: translateY(-15px);
+    transition: transform .3s;
+}
+.card1 h5{
+    font-size:20px;
+}
+.card-body{
+    color:rgb(110, 109, 109);
+    font-size: 0.9em;
+}
+.star{
+    color:#fbc02d;
+}
+.cost span{
+    color:red;
+    font-weight: bold;
+    font-size: 20px;
+}
+.cart{
+    display:block;
+    background:black;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.cart span{
+    font-weight: 400;
+}
+.cart:hover{
+    opacity: .8;
+}
+.cart a{
+    text-decoration: none;
+}
+/* end content */
+
+.viewall .btn{
+    padding:5px 100px;
+}
+
+/* footer */
+footer{
+    background-color: black;
+    height: 80px;
+    padding-top: 30px;
+    text-align: center;
+}
+/* footer */
+
+/* responsive */
+
+@media screen and (max-width:1100px){
+    .card1 {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:570px){
+    .container{
+        width:100%;
+    }
+    .cart span{
+        font-size: 13px;
+        font-weight: 400;
+    }
+    .card1 {
+        width: 40%;
+    }
+}
+@media screen and (max-width:377px){
+    .card1 h5{
+        font-size:15px;
+    }
+    .card-body{
+        font-size: 0.8em;
+    }
+    .star{
+        size:10px;
+    }
+    .cost span{
+        font-size: 14px;
+    }
+    .cart span{
+        font-size: 9px;
+    }
+}
+@media screen and (max-width:300px){
+    .navbar-brand{
+        font-size: 12px;
+    }
+    .card1 h5{
+        font-size:11px;
+    }
+    .card-body{
+        font-size: 0.6em;
+    }
+    .star{
+        size:7px;
+    }
+    .cost span{
+        font-size: 11px;
+    }
+    .cart span{
+        font-size: 7px;
+    }
+}
+
+
+/* responsive */
