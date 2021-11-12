@@ -17,7 +17,7 @@
     <script src="js/star-rating.js" type="text/javascript"></script>
     <link rel="shortcut icon" href="img/title logo.png">
   <link rel="apple-touch-icon" href="img/title logo.png">
-    
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css"> -->
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -34,6 +34,21 @@
         
         -webkit-font-smoothing: antialiased;
       }
+
+      .responsive {
+      width: 100%;
+      max-width: 400px;
+      height: auto;}
+      .tbody-new
+        {
+            color: rgb(81, 160, 160);
+        }
+        /* footer{
+    background-color: black;
+    height: 80px;
+    padding-top: 30px;
+    text-align: center;
+} */
   </style>
 
 
@@ -135,7 +150,7 @@ $('a[href*="#"]')
         <nav>
             <a href="#" class="active" data-id='1'>Description</a>
             <a href="#" data-id='2'>rate</a>
-            <a href="#" data-id='3'>Data</a>
+            <a href="#" data-id='3'>Address List</a>
         </nav>
     
         <div class="tab-content active" data-content='1'>
@@ -144,8 +159,8 @@ $('a[href*="#"]')
            
       
 
-            <h1 id="top">Smooth Page Scrolling</h1>
-          
+            <h1 id="top">Welcome To Our Tennis Fields</h1>
+            <img src="img/tennis2.jpg" alt="Nature" class="responsive" width="600" height="400">
             <ul>
               <li><a href="#two">Scroll to Section Two</a></li>
               <li><a href="#three">Scroll to Section Three</a></li>
@@ -172,7 +187,7 @@ $('a[href*="#"]')
               Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus
               lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor,
               facilisis luctus, metus</p>
-          
+              <img src="img/tennis3.jpg" alt="Nature" class="responsive" width="600" height="400">
             <h2 id="two">Section Two</h2>
           
             <p><a href="#top">Top</a></p>
@@ -185,7 +200,7 @@ $('a[href*="#"]')
               Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus
               lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor,
               facilisis luctus, metus</p>
-          
+              <img src="img/tennis4.jpg" alt="Nature" class="responsive" width="600" height="400">
             <h2 id="three">Section Three</h2>
           
             <p><a href="#top">Top</a></p>
@@ -226,15 +241,27 @@ $('a[href*="#"]')
       
         </div>
         <div class="tab-content" data-content='3'>
-            Data JSON
+          <table class="table table-bordered" style="width:100%" cellpadding="10px" cellspacing="10px" border="1">
+            <thead>
+                <tr>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Nations</th>
+                    <th>Photo</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
 
             
 
         </div>
     </div>
-
+<br><br><br>
     
-
+    <!-- <footer>
+      <p class="text-light">Made with <span class="text-danger"><i class="bi bi-heart-fill"></i></span> by Global Perspective Sport</p>
+  </footer> -->
 </body>
 
 <script src="js/jquery-3.6.0.js"></script>
@@ -252,5 +279,27 @@ $('a[href*="#"]')
   }
 });
 
+</script>
+
+<script>
+  $.getJSON("tennis.json", function(res){
+      var items=[];
+
+      $.each(res, function(index, val){
+
+
+          items.push("<tr>");
+              items.push("<td id='"+index+"'>" + val.City + "</td>");
+              items.push("<td id='"+index+"'>" + val.State + "</td>");
+              items.push("<td id='"+index+"'>" + val.Nations + "</td>");
+              items.push("<td id='"+index+"'><img src='"+ val.Photo +"' height='300' width='400'> </td>");
+          items.push("</tr>");
+      })
+      $("<tbody/>", {
+          "class" : "tbody-new",
+          html:items.join("")
+      }).appendTo("table")
+
+  });
 </script>
 </html>

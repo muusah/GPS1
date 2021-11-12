@@ -1,0 +1,24 @@
+[
+    {
+        "City" : "Denpasar",
+        "State" : "Bali",
+        "Nations" : "Indonesia",
+        "Photo" : "img/tennis4.jpg"
+    },
+    
+    {
+        "City" : "Tokyo",
+        "State" : "Kanto",
+        "Nations" : "Japan",
+        "Photo" : "img/tennis3.jpg"
+    },
+
+    {
+        "City" : "Giza",
+        "State" : "Cairo",
+        "Nations" : "Egypt",
+        "Photo" : "img/tennis2.jpg"
+    }
+
+
+]
